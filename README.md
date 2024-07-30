@@ -70,23 +70,23 @@ Edit the `.env` file with the following settings:
 
 | Setting                      | Description                                                                              | Default Value                     |
 |------------------------------|------------------------------------------------------------------------------------------|-----------------------------------|
-| **API_ID / API_HASH**        | Platform data from which to launch a Telegram session _(stock - Android)_                |                                   |
-| **MIN_AVAILABLE_ENERGY**     | Minimum amount of available energy, upon reaching which there will be a delay _(eg 100)_ | 100                               |
-| **SLEEP_BY_MIN_ENERGY**      | Delay when reaching minimum energy in seconds _(eg [1800,2400])_                         | [1800, 2400]                      |
-| **AUTO_UPGRADE**             | Whether to upgrade the passive earn _(True / False)_                                     | True                              |
+| **API_ID / API_HASH**        | Platform data from which to launch a Telegram session [int]/[str]                        | EMPTY                             |
+| **MIN_AVAILABLE_ENERGY**     | Minimum amount of available energy, upon reaching which there will be a delay _(eg 100)_     | 200                               |
+| **SLEEP_BY_MIN_ENERGY**      | Delay when reaching minimum energy in seconds _(eg [1800,2400])_                         | [1800, 3600]                      |
+| **AUTO_UPGRADE**             | Whether to upgrade the passive earn _(True / False)_                                     | False                             |
 | **MAX_LEVEL**                | Maximum upgrade level _(eg 20)_                                                          | 20                                |
 | **MAX_PRICE**                | Maximum upgrade price _(eg 50000000)_                                                    | 50000000                          |
 | **BALANCE_TO_SAVE**          | Balance limit that the bot "won't touch" _(eg 1000000)_                                  | 1000000                           |
 | **UPGRADES_COUNT**           | The count of cards that the bot will upgrade in 1 lap _(eg 10)_                          | 10                                |
 | **MAX_COMBO_PRICE**          | Maximum purchase price for buying combo cards with an available balance _(eg 10000000)_  | 10000000                          |
-| **APPLY_DAILY_ENERGY**       | Whether to use the daily free energy boost _(True / False)_                              | True                              |
+| **APPLY_DAILY_ENERGY**       | Whether to use the daily free energy boost _(True / False)_                              | False                             |
 | **USE_TAPS**                 | Whether to use taps _(True / False)_                                                     | True                              |
-| **RANDOM_TAPS_COUNT**        | Random number of taps _(eg [50,200])_                                                    | [50, 200]                         |
+| **RANDOM_TAPS_COUNT**        | Random number of taps _(eg [50,200])_                                                    | [10, 50]                          |
 | **SLEEP_BETWEEN_TAP**        | Random delay between taps in seconds _(eg [10,25])_                                      | [10, 25]                          |
-| **USE_RANDOM_DELAY_IN_RUN**  | Use random delay during run _(True / False)_                                             | True                              |
+| **USE_RANDOM_DELAY_IN_RUN**  | Use random delay during run _(True / False)_                                             | False                             |
 | **RANDOM_DELAY_IN_RUN**      | Random delay in run _(eg [0,15])_                                                        | [0, 15]                           |
-| **USE_RANDOM_MINI_GAME_KEY** | Whether to use random key for mini game cipher _(True / False)_                          | True                              |
-| **USE_RANDOM_USERAGENT**     | Whether to random User Agent every time to start _(True / False)_                        | True                              |
+| **USE_RANDOM_MINI_GAME_KEY** | Whether to use random key for mini game cipher _(True / False)_                          | False                             |
+| **USE_RANDOM_USERAGENT**     | Whether to random User Agent every time to start _(True / False)_                        | False                             |
 
 ### Profiles
 
