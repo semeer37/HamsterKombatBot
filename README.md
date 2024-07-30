@@ -1,6 +1,6 @@
 # HamsterKombatBot for Mobile
 
-A bot for automating tasks in the Hamster Kombat game on Telegram.
+A bot to mine Telegram Hamster Kombat on Mobile Device.
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
@@ -18,6 +18,7 @@ A bot for automating tasks in the Hamster Kombat game on Telegram.
 
 ### Termux
 Download and install Termux from [Termux](https://f-droid.org/packages/com.termux/).
+Direct download link for [Latest Version 0.119.0-beta.1](https://f-droid.org/repo/com.termux_1020.apk).
 
 ### Telegram API Keys
 1. Go to [my.telegram.org](https://my.telegram.org) and log in using your phone number.
@@ -27,11 +28,12 @@ Download and install Termux from [Termux](https://f-droid.org/packages/com.termu
 ## Installation
 
 ### Auto Installation
-1. To install libraries on Termux, run the following commands:
+1. Run(copy and paste) the following commands on Termux:
 ```shell
 pkg install git -y
 git clone https://github.com/semeer37/HamsterKombatBot.git
 cd HamsterKombatBot
+chmod +x autoinstall.sh
 ./autoinstall.sh
 ```
 
@@ -70,8 +72,8 @@ Edit the `.env` file with the following settings:
 
 | Setting                      | Description                                                                              | Default Value                     |
 |------------------------------|------------------------------------------------------------------------------------------|-----------------------------------|
-| **API_ID / API_HASH**        | Platform data from which to launch a Telegram session [int]/[str]                        | EMPTY                             |
-| **MIN_AVAILABLE_ENERGY**     | Minimum amount of available energy, upon reaching which there will be a delay _(eg 100)_     | 200                               |
+| **API_ID / API_HASH**        | Platform data from which to launch a Telegram session _[int]/[str]_                      | EMPTY                             |
+| **MIN_AVAILABLE_ENERGY**     | Minimum amount of available energy, upon reaching which there will be a delay _(eg 100)_ | 200                               |
 | **SLEEP_BY_MIN_ENERGY**      | Delay when reaching minimum energy in seconds _(eg [1800,2400])_                         | [1800, 3600]                      |
 | **AUTO_UPGRADE**             | Whether to upgrade the passive earn _(True / False)_                                     | False                             |
 | **MAX_LEVEL**                | Maximum upgrade level _(eg 20)_                                                          | 20                                |
