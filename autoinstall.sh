@@ -12,8 +12,11 @@ handle_error() {
 # Update and upgrade packages
 pkg update && pkg upgrade -y || handle_error "Failed to update and upgrade packages."
 
-# Install Python and wget
-pkg install python rust -y || handle_error "Failed to install Python and wget."
+# Install Python
+pkg install python -y || handle_error "Failed to install Python."
+
+# Install Rust (Required for Wheeling of Pydantic)
+pkg install Rust -y || handle_error "Failed to install Rust."
 
 # Download HamsterKombatBot
 git clone https://github.com/semeer37/HamsterKombatBot.git || handle_error "Failed to clone HamsterKombatBot Github repo" 
@@ -25,7 +28,7 @@ cd HamsterKombatBot || handle_error "Failed to change directory to HamsterKombat
 python -m venv venv || handle_error "Failed to create virtual environment."
 source venv/bin/activate || handle_error "Failed to activate virtual environment."
 
-# Install requirements
+# Install requirements (wheeling of Pydanctic core might take some time)
 pip install -r requirements.txt || handle_error "Failed to install requirements."
 
 # Copy .env-example to .env
@@ -45,4 +48,4 @@ python main.py -a 1 || handle_error "Failed to create sessions."
 # Run the Python script to start automation
 python main.py -a 2 || handle_error "Failed to start automation."
 
-echo "Automation started successfully."
+echo "Bot started successfully."
