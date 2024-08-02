@@ -7,7 +7,7 @@ handle_error() {
 }
 
 # Change Termux repo
-#termux-change-repo || handle_error "Failed to change Termux repo."
+termux-change-repo || handle_error "Failed to change Termux repo."
 
 # Update and upgrade packages
 pkg update && pkg upgrade -y || handle_error "Failed to update and upgrade packages."
@@ -16,7 +16,7 @@ pkg update && pkg upgrade -y || handle_error "Failed to update and upgrade packa
 pkg install python -y || handle_error "Failed to install Python."
 
 # Install Rust (Required for Wheeling of Pydantic)
-pkg install Rust -y || handle_error "Failed to install Rust."
+pkg install rust -y || handle_error "Failed to install Rust."
 
 # Download HamsterKombatBot
 git clone https://github.com/semeer37/HamsterKombatBot.git || handle_error "Failed to clone HamsterKombatBot Github repo" 
