@@ -18,12 +18,6 @@ pkg install python -y || handle_error "Failed to install Python."
 # Install Rust (Required for Wheeling of Pydantic)
 pkg install rust -y || handle_error "Failed to install Rust."
 
-# Download HamsterKombatBot
-git clone https://github.com/semeer37/HamsterKombatBot.git || handle_error "Failed to clone HamsterKombatBot Github repo" 
-
-# Change directory to HamsterKombatBot
-cd HamsterKombatBot || handle_error "Failed to change directory to HamsterKombatBot."
-
 # Set up virtual environment
 python -m venv venv || handle_error "Failed to create virtual environment."
 source venv/bin/activate || handle_error "Failed to activate virtual environment."
